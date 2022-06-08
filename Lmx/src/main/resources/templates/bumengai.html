@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改部门</title>
+</head>
+<body>
+  <h1>修改部门</h1>
+  <form action="/up" method="get" >
+
+      <div th:each="ids:${ids}">
+          <input hidden name="id" th:value="${ids.id}">
+      <div>
+
+          <span>编号<sup style="color: red">*</sup></span>
+          <input type="text" name="bumenbianhao" style="margin-left: 50px"
+         th:value="${ids.bumenbianhao}" readonly>
+      </div>
+      <br>
+      <br>
+
+      <div>
+          <span>名称<sup style="color: red">*</sup></span>
+          <input type="text" name="bumenmingcheng" style="margin-left: 50px"
+                 th:value="${ids.bumenmingcheng}">
+      </div>
+      <br>
+      <br>
+      <div>
+          <span>所属省份</span>
+          <input type="text" name="suoshushengfen" style="margin-left: 25px"
+                 th:value="${ids.suoshushengfen}">
+      </div>
+      <br>
+      <br>
+      <div>
+          <span>部门人数</span>
+          <input type="text" name="bumenrenshu" style="margin-left: 25px"
+                 th:value="${ids.bumenrenshu}">
+      </div>
+      <br>
+      <br>
+      <div>
+          <span>描述</span>
+          <textarea style="margin-left:60px;width: 165px" name="miaoshu"
+                    th:value="${ids.miaoshu}"></textarea>
+      </div>
+      <br>
+      <br>
+      <input type="submit" value="保存" style="width: 200px;background: aqua;color: white">
+      </div>
+  </form>
+
+
+</body>
+</html>

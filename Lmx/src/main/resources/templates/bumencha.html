@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>部门查询</title>
+</head>
+<body>
+<form method="post" action="/delss">
+<table cellspacing="0px" cellpadding="1" border="1px">
+    <tr style="border-bottom: 1px solid gray;">
+        <td><input type="checkbox" onclick="setAllNo()" name="check" id="s"></td>
+        <td>id</td>
+        <td>编号</td>
+        <td>名称</td>
+        <td>所属省份</td>
+        <td>部门人数</td>
+        <td>描述</td>
+        <td>删除</td>
+        <td>修改</td>
+    </tr>
+
+    <!--/*@thymesVar id="dept1" type="ch"*/-->
+    <tr th:each="dept1:${dept1}" style="border-bottom: 1px solid gray;">
+        <td ><input type="checkbox" th:value="${dept1.id}" name="check" ></td>
+        <td th:text="${dept1.id}"></td>
+        <td th:text="${dept1.bumenbianhao}"></td>
+        <td th:text="${dept1.bumenmingcheng}"></td>
+        <td th:text="${dept1.suoshushengfen}"></td>
+        <td th:text="${dept1.bumenrenshu}"></td>
+        <td th:text="${dept1.miaoshu}"></td>
+        <td><a th:href="@{/del/} + ${dept1.id}">删除</a></td>
+        <td><a th:href="@{/gai/} + ${dept1.id}">修改</a></td>
+
+    </tr>
+
+</table>
+    <input type="submit" value="批量删除">
+</form>
+</body>
+</html>
+<script type="text/javascript">
+
+
+
+/*
+function setAllNo(){*/
+    //     var box = document.getElementById("s");
+    //     var loves = document.getElementsByName("check");
+    //     if(box.checked == false){
+    //             for (var i = 0; i < loves.length; i++) {
+    //                     loves[i].checked = false;
+    //                 }
+    //         }else{
+    //             for (var i = 0; i < loves.length; i++) {
+    //                     loves[i].checked = true;
+    //                     }
+    //         }
+    // }
+</script>

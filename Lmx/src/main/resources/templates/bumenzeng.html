@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>部门增加</title>
+</head>
+<body>
+<h1>新增部门</h1>
+    <form action="cha" method="get">
+        <div>
+            <span>编号<sup style="color: red">*</sup></span>
+            <input type="text" name="bumenbianhao" style="margin-left: 50px">
+        </div>
+        <br>
+        <br>
+
+        <div>
+            <span>名称<sup style="color: red">*</sup></span>
+            <input type="text" name="bumenmingcheng" style="margin-left: 50px">
+        </div>
+        <br>
+        <br>
+        <div>
+            <span>所属省份</span>
+            <input type="text" name="suoshushengfen" style="margin-left: 25px">
+        </div>
+        <br>
+        <br>
+        <div>
+            <span>部门人数</span>
+            <input type="text" name="bumenrenshu" style="margin-left: 25px">
+        </div>
+        <br>
+        <br>
+        <div>
+            <span>描述</span>
+           <textarea style="margin-left:60px;width: 165px" name="miaoshu"></textarea>
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="保存" style="width: 200px;background: aqua;color: white">
+    </form>
+</body>
+</html>
